@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="lib/digero_main.js"></script>
+	<script type="text/javascript" src="lib/digero_support.js"></script>
+	<script type="text/javascript" src="src/ace.js"></script>
+  <script type="text/javascript" src="src/ext-language_tools.js"></script>
+	<script type="text/javascript" src="dist/js/tabulator.min.js"></script>
+	<link href="dist/css/tabulator_midnight.css" rel="stylesheet">
+</head>
+<style type="text/css">
+@font-face {
+	font-family: ABeeZee;
+	src: url(fonts/ABeeZee-Regular.otf);
+}
+
+@font-face {
+	font-family: Varta;
+	src: url(fonts/Varta-Regular.ttf);
+}
+
+@font-face {
+	font-family: PressStart;
+	src: url(fonts/prstartk.ttf);
+}
+
+@font-face {
+  font-family: CourierPrime;
+  src: url(fonts/courier-prime.ttf);
+}
+
+@font-face {
+  font-family: GlassTTY;
+  src: url(fonts/Glass_TTY_VT220.ttf);
+}
+
+@font-face {
+  font-family: Sunflower;
+  src: url(fonts/Sunflower.otf);
+}
+
+@font-face {
+  font-family: LinuxLibertine;
+  src: url(fonts/LinLibertine_R.ttf);
+}
+
+@font-face {
+  font-family: GrandNational;
+  src: url(fonts/grandnational.ttf);
+}
+
+body
+{
+	user-select: none;
+	overflow: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3e3e42; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+::-webkit-scrollbar-corner {
+  background: #555;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+select:focus, input:focus{
+    outline: none;
+}
+
+button:focus, input:focus{
+    outline: none;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+</style>
+
+<body oncontextmenu="return false;">
+
+<input style="display:none;" id="saveDialog" accept=".asm" type="file" nwsaveas />
+<input style="display:none;" id="loadDialog" accept=".asm" type="file" />
+<input style="display:none;" id="projectDialog" type="file" nwdirectory />
+
+<script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

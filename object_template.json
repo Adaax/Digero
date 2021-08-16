@@ -1,0 +1,940 @@
+[
+ {
+  "name": "Form",
+  "type": "form",
+  "form": 0,
+  "top": 10,
+  "left": 10,
+  "z": 10,
+  "width": 700,
+  "height": 500,
+  "parent": null,
+  "container": false,
+  "properties": [
+   {
+    "name": "Name",
+    "type": "string",
+    "value": "Form1"
+   },
+   {
+    "name": "BackgroundColor",
+    "type": "number",
+    "value": "#d0d0d0"
+   },
+   {
+    "name": "BorderColor",
+    "type": "number",
+    "value": "#000000"
+   },
+   {
+    "name": "BorderRadius",
+    "type": "number",
+    "value": "0"
+   },
+   {
+    "name": "BorderStyle",
+    "type": "select",
+    "options": "dotted,dashed,solid,double,groove,ridge,inset,outset,none,hidden",
+    "value": "none"
+   },
+   {
+    "name": "BorderWidth",
+    "type": "number",
+    "value": "1"
+   },
+   {
+    "name": "Center",
+    "type": "select",
+    "options": "true,false",
+    "value": "false"
+   },
+   {
+    "name": "Fullscreen",
+    "type": "select",
+    "options": "true,false",
+    "value": "false"
+   },
+   {
+    "name": "Height",
+    "type": "number",
+    "value": 500
+   },
+   {
+    "name": "Left",
+    "type": "number",
+    "value": 10
+   },
+   {
+    "name": "Maximize",
+    "type": "select",
+    "options": "true,false",
+    "value": "false"
+   },
+   {
+    "name": "Script",
+    "type": "file",
+    "value": "Form1.js"
+   },
+   {
+    "name": "Text",
+    "type": "string",
+    "value": "Form1"
+   },
+   {
+    "name": "Top",
+    "type": "number",
+    "value": 10
+   },
+   {
+    "name": "Visibility",
+    "type": "select",
+    "options": "visible,hidden",
+    "value": "visible"
+   },
+   {
+    "name": "Width",
+    "type": "number",
+    "value": 700
+   },
+   {
+    "name": "ZIndex",
+    "type": "number",
+    "value": 10
+   }
+  ]
+ },
+ {
+  "name": "Button",
+  "type": "button",
+  "element_type": "div",
+  "form": 0,
+  "top": 40,
+  "left": 40,
+  "z": 12,
+  "width": 140,
+  "height": 40,
+  "parent": null,
+  "container": false,
+  "properties": [
+   {
+    "name": "Name",
+    "type": "string",
+    "value": "Button"
+   },
+   {
+    "name": "BackgroundColor",
+    "type": "number",
+    "value": "#e1e1e1"
+   },
+   {
+    "name": "BorderColor",
+    "type": "number",
+    "value": ""
+   },
+   {
+    "name": "BorderRadius",
+    "type": "number",
+    "value": "0"
+   },
+   {
+    "name": "BorderStyle",
+    "type": "select",
+    "options": "dotted,dashed,solid,double,groove,ridge,inset,outset,none,hidden",
+    "value": "outset"
+   },
+   {
+    "name": "BorderWidth",
+    "type": "number",
+    "value": "1"
+   },
+   {
+    "name": "Cursor",
+    "type": "select",
+    "options": "default,crosshair,pointer",
+    "value": "default"
+   },
+   {
+    "name": "FontFamily",
+    "type": "select",
+    "options": "ABeeZee,Arial,Courier New",
+    "value": "ABeeZee"
+   },
+   {
+    "name": "FontSize",
+    "type": "string",
+    "value": "12px"
+   },
+   {
+    "name": "Height",
+    "type": "number",
+    "value": 40
+   },
+   {
+    "name": "Left",
+    "type": "number",
+    "value": 40
+   },
+   {
+    "name": "LineHeight",
+    "type": "number",
+    "value": 40
+   },
+   {
+    "name": "MarginBottom",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MarginLeft",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MarginRight",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MarginTop",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "Opacity",
+    "type": "string",
+    "value": "100%"
+   },
+   {
+    "name": "PaddingBottom",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingLeft",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingRight",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingTop",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "Text",
+    "type": "string",
+    "value": "Button"
+   },
+   {
+    "name": "TextAlign",
+    "type": "select",
+    "options": "center,left,right,justify",
+    "value": "center"
+   },
+   {
+    "name": "Top",
+    "type": "number",
+    "value": 40
+   },
+   {
+    "name": "Width",
+    "type": "number",
+    "value": 140
+   },
+   {
+    "name": "ZIndex",
+    "type": "number",
+    "value": 12
+   },
+   {
+    "name": "IsArray",
+    "type": "select",
+    "options": "true,false",
+    "value": "false"
+   },
+   {
+    "name": "ArrayName",
+    "type": "string",
+    "value": ""
+   },
+   {
+    "name": "Index",
+    "type": "number",
+    "value": ""
+   },
+   {
+    "name": "MouseDown",
+    "type": "header"
+   },
+   {
+    "name": "MouseDown.BorderStyle",
+    "type": "select",
+    "options": "dotted,dashed,solid,double,groove,ridge,inset,outset,none,hidden",
+    "value": "inset"
+   },
+   {
+    "name": "MouseDown.LineHeight",
+    "type": "number",
+    "value": 40
+   }
+  ],
+  "element": {}
+ },
+ {
+  "name": "PictureBox",
+  "type": "picturebox",
+  "element_type": "div",
+  "form": 0,
+  "top": 40,
+  "left": 40,
+  "z": 12,
+  "width": 40,
+  "height": 40,
+  "parent": "Form1",
+  "container": false,
+  "properties": [
+   {
+    "name": "Name",
+    "type": "string",
+    "value": "PictureBox1"
+   },
+   {
+    "name": "BackgroundColor",
+    "type": "color",
+    "value": "transparent"
+   },
+   {
+    "name": "BorderColor",
+    "type": "color",
+    "value": "#000000"
+   },
+   {
+    "name": "BorderRadius",
+    "type": "number",
+    "value": "0"
+   },
+   {
+    "name": "BorderStyle",
+    "type": "select",
+    "options": "dotted,dashed,solid,double,groove,ridge,inset,outset,none,hidden",
+    "value": "none"
+   },
+   {
+    "name": "BorderWidth",
+    "type": "number",
+    "value": "1"
+   },
+   {
+    "name": "ElementHeight",
+    "type": "number",
+    "value": 40
+   },
+   {
+    "name": "ElementWidth",
+    "type": "number",
+    "value": 40
+   },
+   {
+    "name": "FlipHorizontal",
+    "type": "select",
+    "options": "true,false",
+    "value": "false"
+   },
+   {
+    "name": "Height",
+    "type": "number",
+    "value": 40
+   },
+   {
+    "name": "HorizontalAlign",
+    "type": "select",
+    "options": "left,center,right",
+    "value": "center"
+   },
+   {
+    "name": "Image",
+    "type": "file",
+    "ext": ".*",
+    "value": ""
+   },
+   {
+    "name": "ImageCenter",
+    "type": "select",
+    "options": "true,false",
+    "value": "true"
+   },
+   {
+    "name": "Left",
+    "type": "number",
+    "value": 40
+   },
+   {
+    "name": "MarginBottom",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MarginLeft",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MarginRight",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MarginTop",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "Opacity",
+    "type": "string",
+    "value": "100%"
+   },
+   {
+    "name": "PaddingBottom",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingLeft",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingRight",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingTop",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "Rotation",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "Scale",
+    "type": "select",
+    "options": "true,false",
+    "value": "false"
+   },
+   {
+    "name": "Top",
+    "type": "number",
+    "value": 40
+   },
+   {
+    "name": "VerticalAlign",
+    "type": "select",
+    "options": "left,center,right",
+    "value": "center"
+   },
+   {
+    "name": "Visibility",
+    "type": "string",
+    "value": "visible"
+   },
+   {
+    "name": "Width",
+    "type": "number",
+    "value": 40
+   },
+   {
+    "name": "ZIndex",
+    "type": "number",
+    "value": 12
+   },
+   {
+    "name": "IsArray",
+    "type": "select",
+    "options": "true,false",
+    "value": "false"
+   },
+   {
+    "name": "ArrayName",
+    "type": "string",
+    "value": ""
+   },
+   {
+    "name": "Index",
+    "type": "number",
+    "value": ""
+   },
+   {
+    "name": "Tooltip",
+    "type": "header"
+   },
+   {
+    "name": "Tooltip.Tooltip",
+    "type": "select",
+    "options": "true,false",
+    "value": "false"
+   },
+   {
+    "name": "Tooltip.BackgroundColor",
+    "type": "color",
+    "value": "transparent"
+   },
+   {
+    "name": "Tooltip.FontColor",
+    "type": "color",
+    "value": "#000000"
+   },
+   {
+    "name": "Tooltip.FontFamily",
+    "type": "select",
+    "options": "ABeeZee,Arial,Courier New,PressStart",
+    "value": "ABeeZee"
+   },
+   {
+    "name": "Tooltip.FontSize",
+    "type": "string",
+    "value": "12px"
+   },
+   {
+    "name": "Tooltip.Text",
+    "type": "string",
+    "value": ""
+   }
+  ],
+  "element": {}
+ },
+ {
+  "name": "PictureFrame",
+  "type": "pictureframe",
+  "element_type": "div",
+  "form": 0,
+  "top": 127,
+  "left": 207,
+  "z": 12,
+  "width": 38,
+  "height": 64,
+  "parent": "TileMap1",
+  "container": false,
+  "properties": [
+   {
+    "name": "Name",
+    "type": "string",
+    "value": "SpaceMan"
+   },
+   {
+    "name": "AnimateInterval",
+    "type": "number",
+    "value": "0"
+   },
+   {
+    "name": "BackgroundColor",
+    "type": "color",
+    "value": "transparent"
+   },
+   {
+    "name": "BorderColor",
+    "type": "color",
+    "value": "#000000"
+   },
+   {
+    "name": "BorderRadius",
+    "type": "number",
+    "value": "0"
+   },
+   {
+    "name": "BorderStyle",
+    "type": "select",
+    "options": "dotted,dashed,solid,double,groove,ridge,inset,outset,none,hidden",
+    "value": "none"
+   },
+   {
+    "name": "BorderWidth",
+    "type": "number",
+    "value": "1"
+   },
+   {
+    "name": "Filter",
+    "type": "string",
+    "value": ""
+   },
+   {
+    "name": "FlipHorizontal",
+    "type": "select",
+    "options": "true,false",
+    "value": "false"
+   },
+   {
+    "name": "Frame",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "Frames",
+    "type": "number",
+    "value": "4"
+   },
+   {
+    "name": "Height",
+    "type": "number",
+    "value": "64"
+   },
+   {
+    "name": "Image",
+    "type": "file",
+    "ext": ".*",
+    "value": ""
+   },
+   {
+    "name": "Left",
+    "type": "number",
+    "value": 207
+   },
+   {
+    "name": "MarginBottom",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MarginLeft",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MarginRight",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MarginTop",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MoveX",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MoveY",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "Opacity",
+    "type": "string",
+    "value": "100%"
+   },
+   {
+    "name": "PaddingBottom",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingLeft",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingRight",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingTop",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "Row",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "Rows",
+    "type": "number",
+    "value": 1
+   },
+   {
+    "name": "Top",
+    "type": "number",
+    "value": 127
+   },
+   {
+    "name": "Trim",
+    "type": "number",
+    "value": "1"
+   },
+   {
+    "name": "Visibility",
+    "type": "select",
+    "options": "visible,hidden,inherit",
+    "value": "visible"
+   },
+   {
+    "name": "Width",
+    "type": "number",
+    "value": "38"
+   },
+   {
+    "name": "ZIndex",
+    "type": "number",
+    "value": "18"
+   },
+   {
+    "name": "IsArray",
+    "type": "select",
+    "options": "true,false",
+    "value": "false"
+   },
+   {
+    "name": "ArrayName",
+    "type": "string",
+    "value": ""
+   },
+   {
+    "name": "Index",
+    "type": "number",
+    "value": ""
+   },
+   {
+    "name": "MouseOut",
+    "type": "header"
+   },
+   {
+    "name": "MouseOut.BackgroundColor",
+    "type": "color",
+    "value": "transparent"
+   },
+   {
+    "name": "MouseOver",
+    "type": "header"
+   },
+   {
+    "name": "MouseOver.BackgroundColor",
+    "type": "color",
+    "value": "transparent"
+   },
+   {
+    "name": "Tooltip",
+    "type": "header"
+   },
+   {
+    "name": "Tooltip.Tooltip",
+    "type": "select",
+    "options": "true,false",
+    "value": "false"
+   },
+   {
+    "name": "Tooltip.BackgroundColor",
+    "type": "color",
+    "value": "#000000"
+   },
+   {
+    "name": "Tooltip.FontColor",
+    "type": "color",
+    "value": "#ffffff"
+   },
+   {
+    "name": "Tooltip.FontFamily",
+    "type": "select",
+    "options": "ABeeZee,Arial,Courier New,PressStart",
+    "value": "ABeeZee"
+   },
+   {
+    "name": "Tooltip.FontSize",
+    "type": "string",
+    "value": "12px"
+   },
+   {
+    "name": "Tooltip.Text",
+    "type": "string",
+    "value": ""
+   }
+  ],
+  "element": {}
+ },
+ {
+  "name": "Label",
+  "type": "label",
+  "element_type": "div",
+  "form": 0,
+  "top": 767,
+  "left": 24,
+  "z": 12,
+  "width": 112,
+  "height": 43,
+  "parent": "Form1",
+  "container": false,
+  "properties": [
+   {
+    "name": "Name",
+    "type": "string",
+    "value": "Label1"
+   },
+   {
+    "name": "BackgroundColor",
+    "type": "color",
+    "value": "transparent"
+   },
+   {
+    "name": "BorderColor",
+    "type": "color",
+    "value": "#000000"
+   },
+   {
+    "name": "BorderRadius",
+    "type": "number",
+    "value": "0"
+   },
+   {
+    "name": "BorderStyle",
+    "type": "select",
+    "options": "dotted,dashed,solid,double,groove,ridge,inset,outset,none,hidden",
+    "value": "none"
+   },
+   {
+    "name": "BorderWidth",
+    "type": "number",
+    "value": "1"
+   },
+   {
+    "name": "Cursor",
+    "type": "select",
+    "options": "default,crosshair,pointer",
+    "value": "default"
+   },
+   {
+    "name": "FontColor",
+    "type": "color",
+    "value": "#000000"
+   },
+   {
+    "name": "FontFamily",
+    "type": "select",
+    "options": "ABeeZee,Arial,Courier New,PressStart",
+    "value": "ABeeZee"
+   },
+   {
+    "name": "FontSize",
+    "type": "string",
+    "value": "12px"
+   },
+   {
+    "name": "Height",
+    "type": "number",
+    "value": 43
+   },
+   {
+    "name": "Image",
+    "type": "file",
+    "ext": ".*",
+    "value": ""
+   },
+   {
+    "name": "Left",
+    "type": "number",
+    "value": 24
+   },
+   {
+    "name": "LineHeight",
+    "type": "string",
+    "value": "normal"
+   },
+   {
+    "name": "MarginBottom",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MarginLeft",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MarginRight",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "MarginTop",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingBottom",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingLeft",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingRight",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "PaddingTop",
+    "type": "number",
+    "value": 0
+   },
+   {
+    "name": "Text",
+    "type": "string",
+    "value": "Label1"
+   },
+   {
+    "name": "TextAlign",
+    "type": "select",
+    "options": "left,right,center,justify",
+    "value": "left"
+   },
+   {
+    "name": "Top",
+    "type": "number",
+    "value": 767
+   },
+   {
+    "name": "Visibility",
+    "type": "select",
+    "options": "visible,hidden,inherit",
+    "value": "visible"
+   },
+   {
+    "name": "Width",
+    "type": "number",
+    "value": 112
+   },
+   {
+    "name": "ZIndex",
+    "type": "number",
+    "value": 12
+   },
+   {
+    "name": "IsArray",
+    "type": "select",
+    "options": "true,false",
+    "value": "false"
+   },
+   {
+    "name": "ArrayName",
+    "type": "string",
+    "value": ""
+   },
+   {
+    "name": "Index",
+    "type": "number",
+    "value": ""
+   }
+  ],
+  "element": {}
+ }
+]

@@ -1,0 +1,26 @@
+{
+  "name": "Digero",
+  "main": "digero_main.html",
+  "version": "0.0.1",
+  "chromium-args": "--disk-cache-size=1 --disable-pinch",
+  "window": {
+    "title": "Digero 0.1.0",
+    "icon": "rsicon.png",
+    "toolbar": false,
+    "frame": true,
+    "position": "center",
+    "width": 1280,
+    "height": 720,
+    "fullscreen": false,
+    "resizable": true
+  },
+  "webkit": {
+    "plugin": true
+  },
+  "scripts": {
+    "start": "nodewebkit"
+  },
+  "dependencies": {
+    "@sweet-js/cli": "^3.0.13"
+  }
+}
