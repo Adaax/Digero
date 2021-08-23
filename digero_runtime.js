@@ -257,7 +257,14 @@ build_data = function()
 			if (project_data.tables[i].columns[j].type == "code" && project_data.tables[i].columns[j].sub == "javascript")
 			{
 				for (var k = 0; k < parseInt(eval(table_name + ".length")); k++)
-					eval(table_name + "[" + k + "]." + project_data.tables[i].columns[j].title + " = function() {" + project_data.tables[i].data[k][project_data.tables[i].columns[j].title] + "}");
+				{
+					if (project_data.tables[i].columns[j].params != undefined)
+						var params = project_data.tables[i].columns[j].params;
+					else
+						var params = "";
+
+					eval(table_name + "[" + k + "]." + project_data.tables[i].columns[j].title + " = function(" + params + ") {" + project_data.tables[i].data[k][project_data.tables[i].columns[j].title] + "}");
+				}
 			}
 		}
 	}
