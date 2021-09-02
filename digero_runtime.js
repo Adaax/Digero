@@ -2446,7 +2446,7 @@ window_create_runtime = function(element, index)
 	header_boxmax.style.height = "20px";
 
 	header_boxmax.style.backgroundColor = "transparent"; 
-	header_boxmax.innerHTML = "<center><img id = \"" + objects[index].name  + "_header_x\" src = \"img/window_max.png\"></center>";
+	header_boxmax.innerHTML = "<center><img id = \"" + objects[index].name  + "_header_max\" src = \"img/window_max.png\"></center>";
 
 	element_header.appendChild(header_boxmax);
 
@@ -2462,7 +2462,7 @@ window_create_runtime = function(element, index)
 	header_boxmin.style.height = "20px";
 
 	header_boxmin.style.backgroundColor = "transparent"; 
-	header_boxmin.innerHTML = "<center><img id = \"" + objects[index].name  + "_header_x\" src = \"img/window_min.png\"></center>";
+	header_boxmin.innerHTML = "<center><img id = \"" + objects[index].name  + "_header_min\" src = \"img/window_min.png\"></center>";
 
 	element_header.appendChild(header_boxmin);
 
