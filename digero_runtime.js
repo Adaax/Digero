@@ -1477,6 +1477,17 @@ draw_element = function(index)
 		element.style.borderStyle = get_property(index, "BorderStyle").value;
 		element.style.borderWidth = get_property(index, "BorderWidth").value + "px";
 
+		if (get_property(index, "BorderImageSource").value != "")
+		{
+			element.style.borderStyle = "solid";
+
+			element.style.borderImageSource = "url(\"" + project_folder + "/" + get_property(index, "BorderImageSource").value + "\")";
+			element.style.borderImageWidth = get_property(index, "BorderImageWidth").value + "px";
+			element.style.borderImageRepeat = get_property(index, "BorderImageRepeat").value;
+			element.style.borderImageSlice = get_property(index, "BorderImageSlice").value;
+			element.style.borderImageOutset = get_property(index, "BorderImageOutset").value + "px";
+		}
+
 		element.style.backgroundColor = get_property(index, "BackgroundColor").value;
 		element.style.visibility = get_property(index, "Visibility").value;
 
@@ -3288,6 +3299,17 @@ scrollpanel_draw_runtime = function(element, index)
 	element.style.borderRadius = get_property(index, "BorderRadius").value + "px";
 	element.style.borderStyle = get_property(index, "BorderStyle").value;
 	element.style.borderWidth = get_property(index, "BorderWidth").value + "px";
+
+	if (get_property(index, "BorderImageSource").value != "")
+	{
+		element.style.borderStyle = "solid";
+
+		element.style.borderImageSource = "url(\"" + project_folder + "/" + get_property(index, "BorderImageSource").value + "\")";
+		element.style.borderImageWidth = get_property(index, "BorderImageWidth").value + "px";
+		element.style.borderImageRepeat = get_property(index, "BorderImageRepeat").value;
+		element.style.borderImageSlice = get_property(index, "BorderImageSlice").value;
+		element.style.borderImageOutset = get_property(index, "BorderImageOutset").value + "px";
+	}
 
 	element.style.overflowX = get_property(index, "OverflowX").value;
 	element.style.overflowY = get_property(index, "OverflowY").value;
