@@ -3241,8 +3241,8 @@ pictureframe_draw_runtime = function(element, index)
 			{
 				this.style.position = "absolute";
 
-				this.style.left = -((this.width / parseInt(get_property(index, "Frames").value)) * parseInt(get_property(index, "Frame").value)) + "px";
-				this.style.top = -((this.height / parseInt(get_property(index, "Rows").value)) * parseInt(get_property(index, "Row").value)) + "px";
+				this.style.left = -((this.width / parseInt(get_property(obj_index, "Frames").value)) * parseInt(get_property(obj_index, "Frame").value)) + "px";
+				this.style.top = -((this.height / parseInt(get_property(obj_index, "Rows").value)) * parseInt(get_property(obj_index, "Row").value)) + "px";
 			}
 		} (index), false);
 	}
