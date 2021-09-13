@@ -601,11 +601,14 @@ remove_object = function(obj_name)
 		if (objects[i].name == obj_name)
 			break;
 
-	if (i < objects.length)
+	objects[i].name = null;
+	objects[i].properties.length = 0;
+
+	/*if (i < objects.length)
 		objects.splice(i, 1);
 
 	for (var i = 0; i < objects.length; i++)
-		objects[i].index = i;
+		objects[i].index = i;*/
 }
 
 add_object_fxs = function(this_object)
@@ -799,7 +802,11 @@ newElement = function(element_name, element_type)
 
 	if (i < object_template.length)
 	{
-		index = objects.length;
+		for (var j = 0; j < objects.length; j++)
+			if (objects[j].name == null)
+				break;
+
+		index = j;
 
 		objects[index] = {};
 		objects[index] = JSON.parse(JSON.stringify(object_template[i]));
