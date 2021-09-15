@@ -3142,6 +3142,12 @@ picturebox_draw_runtime = function(element, index)
 			{
 				this.style.position = "absolute";
 
+				if (get_property(index, "Resize") != null && get_property(index, "Resize").value == "true")
+				{
+					set_property(index, "Width", this.width);
+					set_property(index, "Height", this.height);
+				}
+
 				if (get_property(index, "Scale") != null && get_property(index, "Scale").value == "true")
 				{
 					this.width = parseInt(get_property(index, "Width").value);
@@ -3153,7 +3159,7 @@ picturebox_draw_runtime = function(element, index)
 					if (get_property(index, "HorizontalAlign").value == "center")
 						this.style.left = Math.floor((get_property(index, "ElementWidth").value - this.width) / 2) + "px";
 					else if (get_property(index, "HorizontalAlign").value == "right")
-						this.style.left = (get_property(index, "ElementWidth").value - this.width) + "px";
+						this.style.left = (get_property(index, "Width").value - this.width) + "px";
 					else
 						this.style.left = "0px";
 				}
@@ -3163,7 +3169,7 @@ picturebox_draw_runtime = function(element, index)
 					if (get_property(index, "VerticalAlign").value == "center")
 						this.style.top = Math.floor((get_property(index, "ElementHeight").value - this.height) / 2) + "px";
 					else if (get_property(index, "VerticalAlign").value == "right")
-						this.style.top = (get_property(index, "ElementHeight").value - this.height) + "px";
+						this.style.top = (get_property(index, "Height").value - this.height) + "px";
 					else
 						this.style.top = "0px";
 				}

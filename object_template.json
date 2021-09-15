@@ -418,6 +418,12 @@
     "value": 0
    },
    {
+    "name": "Resize",
+    "type": "select",
+    "options": "true,false",
+    "value": "true"
+   },
+   {
     "name": "Rotation",
     "type": "number",
     "value": 0
