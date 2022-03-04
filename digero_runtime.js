@@ -381,7 +381,7 @@ launch_program = function()
 	//eval(master_code);
 	//goid = setInterval(do_frame, 17);
 }
-
+ 
 do_frame = function()
 {
 	tick++;
@@ -604,11 +604,11 @@ remove_object = function(obj_name)
 	objects[i].name = null;
 	objects[i].properties.length = 0;
 
-	/*if (i < objects.length)
+	if (i < objects.length)
 		objects.splice(i, 1);
 
 	for (var i = 0; i < objects.length; i++)
-		objects[i].index = i;*/
+		objects[i].index = i;
 }
 
 add_object_fxs = function(this_object)
@@ -1974,11 +1974,32 @@ tilemap_create_runtime = function(element, index)
 
 	element_map_div.appendChild(element_overlay);
 
+	element_map_clone_left = document.createElement("canvas");
+	element_map_clone_left.id = objects[index].name + "_map_clone_left";
+	element_map_clone_left.style.position = "absolute";
+
+	element_map_clone_left.style.top = "0px";
+	element_map_clone_left.style.left = "0px";
+
+	element_map_div.appendChild(element_map_clone_left);
+
+	element_map_clone_right = document.createElement("canvas");
+	element_map_clone_right.id = objects[index].name + "_map_clone_right";
+	element_map_clone_right.style.position = "absolute";
+
+	element_map_clone_right.style.top = "0px";
+	element_map_clone_right.style.right = "0px";
+
+	element_map_div.appendChild(element_map_clone_right);
+
 	objects[index].drag = false;
 	objects[index].drag_x = 0;
 	objects[index].drag_y = 0;
 	objects[index].start_x = 0;
 	objects[index].start_y = 0;
+
+	objects[index].wrap_left = false;
+	objects[index].wrap_right = false;
 
 	element_highlight = document.createElement("img");
 	element_highlight.id = objects[index].name + "_highlight";
@@ -2068,6 +2089,37 @@ tilemap_create_runtime = function(element, index)
 
 		ctx.fillStyle = tile_color;
 		ctx.fillRect((x * tile_width) + offset, (y * tile_height) + offset, tile_width - (offset * 2), tile_height - (offset * 2));
+	}
+
+	objects[index].cloneMap = function()
+	{
+		var map_ctx = document.getElementById(this.name + "_map").getContext("2d");
+		var map_width = parseInt(get_property(this.index, "TileWidth").value) * parseInt(get_property(this.index, "MapWidth").value);
+		var map_height = parseInt(get_property(this.index, "TileHeight").value) * parseInt(get_property(this.index, "MapHeight").value);
+
+		var map_clone = document.getElementById(this.name + "_map_clone_left");
+		var map_clone_ctx = map_clone.getContext("2d");
+
+		map_clone.width = document.getElementById(this.name + "_map").width;
+		map_clone.height = document.getElementById(this.name + "_map").height;
+
+		map_clone.style.left = -(map_width) + "px";
+		map_clone.style.width = map_width + "px";
+		map_clone.style.height = map_height + "px";
+
+		map_clone_ctx.drawImage(document.getElementById(this.name + "_map"), 0, 0);
+
+		var map_clone = document.getElementById(this.name + "_map_clone_right");
+		var map_clone_ctx = map_clone.getContext("2d");
+
+		map_clone.width = document.getElementById(this.name + "_map").width;
+		map_clone.height = document.getElementById(this.name + "_map").height;
+
+		map_clone.style.left = map_width + "px";
+		map_clone.style.width = map_width + "px";
+		map_clone.style.height = map_height + "px";
+
+		map_clone_ctx.drawImage(document.getElementById(this.name + "_map"), 0, 0);
 	}
 
 	objects[index].mapOverlay = function(x, y, image)
@@ -2169,18 +2221,55 @@ tilemap_create_runtime = function(element, index)
 
 			if (evt.buttons == 1 && get_property(index, "Draggable").value == "true")
 			{
-				this.style.left = (objects[index].start_x + (evt.pageX - objects[index].drag_x)) + "px";
-				this.style.top = (objects[index].start_y + (evt.pageY - objects[index].drag_y)) + "px";
+				this.style.left = (objects[index].start_x + ((evt.pageX - objects[index].drag_x)) / window_zoom) + "px";
+				this.style.top = (objects[index].start_y + ((evt.pageY - objects[index].drag_y)) / window_zoom) + "px";
 
-				if (parseInt(this.style.left) > 0)
+				if (parseInt(this.style.left) > 0 && get_property(index, "HorizontalWrap").value == "false")
 					this.style.left = "0px";
-				else if (parseInt(this.style.left) < -(get_property(index, "MapWidth").value * get_property(index, "TileWidth").value) + get_property(index, "Width").value)
-					this.style.left = (-(get_property(index, "MapWidth").value * get_property(index, "TileWidth").value) + get_property(index, "Width").value) + "px";
+				else if (parseInt(this.style.left) < -(get_property(index, "MapWidth").value * get_property(index, "TileWidth").value) + parseInt(get_property(index, "Width").value) && get_property(index, "HorizontalWrap").value == "false")
+					this.style.left = (-(get_property(index, "MapWidth").value * get_property(index, "TileWidth").value) + parseInt(get_property(index, "Width").value)) + "px";
 
 				if (parseInt(this.style.top) > 0)
 					this.style.top = "0px";
-				else if (parseInt(this.style.top) < -(get_property(index, "MapHeight").value * get_property(index, "TileHeight").value) + get_property(index, "Height").value)
-					this.style.top = (-(get_property(index, "MapHeight").value * get_property(index, "TileHeight").value) + get_property(index, "Height").value) + "px";
+				else if (parseInt(this.style.top) < -(get_property(index, "MapHeight").value * get_property(index, "TileHeight").value) + parseInt(get_property(index, "Height").value))
+					this.style.top = (-(get_property(index, "MapHeight").value * get_property(index, "TileHeight").value) + parseInt(get_property(index, "Height").value)) + "px";
+
+				if (get_property(index, "HorizontalWrap").value == "true")
+				{
+					if (parseInt(this.style.left) > 0)
+					{
+						if (objects[index].wrap_left == false)
+						{
+							objects[index].wrap_left = true;
+
+							// move elements in container
+						}
+						else if (parseInt(this.style.left) >= parseInt(get_property(index, "Width").value))
+						{
+							this.style.left = -((get_property(index, "MapWidth").value * get_property(index, "TileWidth").value) - get_property(index, "Width").value) + "px";
+
+							objects[index].start_x -= get_property(index, "MapWidth").value * get_property(index, "TileWidth").value;
+							objects[index].wrap_left = false;
+						}
+					}
+					else if (parseInt(this.style.left) < -(get_property(index, "MapWidth").value * get_property(index, "TileWidth").value) + parseInt(get_property(index, "Width").value))
+					{
+						if (objects[index].wrap_right == false)
+						{
+							objects[index].wrap_right = true;
+
+							// move elements in container
+						}
+						else if (parseInt(this.style.left) <= -(get_property(index, "MapWidth").value * get_property(index, "TileWidth").value))
+						{
+							this.style.left = "0px";
+
+							objects[index].start_x += get_property(index, "MapWidth").value * get_property(index, "TileWidth").value;
+							objects[index].wrap_left = false;
+						}
+					}
+
+				}
 			}
 
 			if (get_property(index, "Highlight").value == "follow" || (get_property(index, "Highlight").value == "follow/select" && (parseInt(get_property(index, "SelectX").value) == -1 || parseInt(get_property(index, "SelectY").value) == -1)))
